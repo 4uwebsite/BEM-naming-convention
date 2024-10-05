@@ -25,6 +25,17 @@
 </head>
 <body>
     <main>
+        <header>
+            <ul>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Block</a></li>
+                <li><a href="#">Element</a></li>
+                <li><a href="#">Modifier</a></li>
+                <li><a href="#">Strcture</a></li>
+                <li><a href="#">Example</a></li>
+                <li><a href="#">Benefits</a></li>
+            </ul>
+        </header>
         <article>
             <h1>BEM Naming Convention Explained</h1>
             <p>The BEM naming convention (Block, Element, Modifier) is a methodology used for organizing CSS classes in a way that makes code more readable, maintainable, and scalable. It is particularly useful for large-scale projects or when working in teams. Here's how it breaks down:</p>
@@ -51,10 +62,10 @@
             <p>Let’s say you have a <code class="code-element">card</code> component with a title, text, and a button inside. You want to style it using BEM:</p>
             <div class="code-block">
                 <code>
-                    &lt;div class=&quot;card&quot;&gt;&lt;/div&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 class=&quot;card__title&quot;&gt;Card Title&lt;/h2&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class=&quot;card__text&quot;&gt;Some card text.&lt;/p&gt;<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;button class=&quot;card__button card__button--primary&quot;&gt;Read more&lt;/button&gt;<br>
+                    &lt;div <span class="class-red">class</span>=&quot;<span class="class-name-green">card</span>&quot;&gt;&lt;/div&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 <span class="class-red">class</span>=&quot;<span class="class-name-green">card__title</span>&quot;&gt;Card Title&lt;/h2&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;p <span class="class-red">class</span>=&quot;<span class="class-name-green">card__text</span>&quot;&gt;Some card text.&lt;/p&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;button <span class="class-red">class</span>=&quot;<span class="class-name-green">card__button card__button--primary</span>&quot;&gt;Read more&lt;/button&gt;<br>
                     &lt;/div&gt;
                 </code>
             </div>
@@ -71,17 +82,6 @@
             </ul>
             <p class="end-para">BEM ensures consistency, especially in complex projects where multiple developers are involved.</p>
         </article>
-        <footer>
-            <ul>
-                <li>Overview</li>
-                <li>Block</li>
-                <li>Element</li>
-                <li>Modifier</li>
-                <li>BEM Naming Strcture</li>
-                <li>Example</li>
-                <li>Benefits of BEM</li>
-            </ul>
-        </footer>
     </main>
 </body>
 </html>
