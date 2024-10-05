@@ -30,12 +30,46 @@
             <p>The BEM naming convention (Block, Element, Modifier) is a methodology used for organizing CSS classes in a way that makes code more readable, maintainable, and scalable. It is particularly useful for large-scale projects or when working in teams. Here's how it breaks down:</p>
             <h2>Block</h2>
             <p>The block is a standalone component that represents a higher-level abstraction of the user interface. It could be something like a button, header, or menu.</p>
-            <p>Example: <code>.menu, .button, .header</code></p>
+            <p>Example: <code class="code-element">.menu</code>, <code class="code-element">.button</code>, <code class="code-element">.header</code></p>
             <h2>Element</h2>
             <p>An element is a part of a block that has no standalone meaning and is semantically tied to its block. Elements are the building blocks of the block, and they can't exist without it. Elements are connected to blocks with a double underscore <code>__</code>.</p>
-            <p>Example: <code>.menu__item, .button__icon, .header__logo</code></p>
+            <p>Example: <code class="code-element">.menu__item</code>, <code class="code-element">.button__icon</code class="code-element">, <code class="code-element">.header__logo</code></p>
             <h2>Modifier</h2>
-
+            <p>A modifier is used to change the appearance, behavior, or state of a block or an element. Modifiers are connected with a double hyphen <code class="code-element">--</code>.</p>
+            <p>Example: <code class="code-element">.menu__item</code>, <code class="code-element">.button__icon</code>, <code class="code-element">.header__logo</code></p>
+            <h2>BEM Naming Structure</h2>
+            <p>The general structure follows this pattern:</p>
+            <div class="code-block">
+                <code>
+                    .block {}<br>
+                    .block__element {}<br>
+                    .block--modifier {}<br>
+                    .block__element--modifier {}<br>
+                </code>
+            </div>
+            <h2>Example</h2>
+            <p>Let’s say you have a <code class="code-element">card</code> component with a title, text, and a button inside. You want to style it using BEM:</p>
+            <div class="code-block">
+                <code>
+                    &lt;div class=&quot;card&quot;&gt;&lt;/div&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 class=&quot;card__title&quot;&gt;Card Title&lt;/h2&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;p class=&quot;card__text&quot;&gt;Some card text.&lt;/p&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;button class=&quot;card__button card__button--primary&quot;&gt;Read more&lt;/button&gt;<br>
+                    &lt;/div&gt;
+                </code>
+            </div>
+            <ul>
+                <li>Block: <code class="code-element">card</code></li>
+                <li>Element: <code class="code-element">card__title</code>, <code class="code-element">card__text</code>, <code class="code-element">card__button</code></li>
+                <li>Modifier: <code class="code-element">card__button--primary</code></li>
+            </ul>
+            <h2>Benefits of BEM</h2>
+            <ul>
+                <li><strong>Clarity</strong>: It's clear which styles apply to which component.</li>
+                <li><strong>Reusability</strong>: Blocks and elements can be reused across different parts of the site.</li>
+                <li><strong>Scalability</strong>: It's easier to scale the codebase with new components or styles without conflicts.</li>
+            </ul>
+            <p>BEM ensures consistency, especially in complex projects where multiple developers are involved.</p>
         </article>
         <footer>
             <ul>
