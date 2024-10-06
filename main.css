@@ -12,8 +12,11 @@
     --code-block-bg: #0D0D0D;
     --class-red: #DF3079;
     --class-name-green: #00A67D;
+    --code-header-bg-grey: #2F2F2F;
+    --code-header-font-lightgrey: #B4B4B4;
     /* Font Variables */
     --h2-font-size: 1.25rem;
+    --code-header-font-size: 0.75rem;
     --code-element-font-size: 0.875rem;
 }
 
@@ -112,7 +115,7 @@ li {
 
 /* CLASSES & IDs -- START */
 
-.code-element, .code-block {
+.code-element, .code-block, .code-header {
     border-radius: 0.25rem;
 }
 
@@ -125,11 +128,62 @@ li {
 .code-block {
     background-color: var(--code-block-bg);
     padding: 1rem;
-    margin: 0.5rem 0;
+    /* margin: 0.5rem 0; */
 }
 
 .end-para {
     margin-top: 1.125rem;
+}
+
+.code-header {
+    background-color: var(--code-header-bg-grey);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 0.5rem 1rem;
+    font-size: var(--code-header-font-size);
+    color: var(--code-header-font-lightgrey);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.code-copy-btn {
+    background-color: var(--code-header-bg-grey);
+    border: none;
+    color: var(--code-header-font-lightgrey);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.code-copy-btn::after {
+    content: "Copy";
+    position: absolute;
+    bottom: -210%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--code-block-bg);
+    color: var(--white-base-font-colour);
+    padding: 0.3125rem 0.625rem;
+    border: 0.1rem solid var(--white-base-font-colour);
+    border-radius: 0.25rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.code-copy-btn:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.icon-sm {
+    /* font-size: var(--code-header-font-size); */
+    width: 1rem;
+    height: 1rem;
 }
 
 /* CLASSES & IDs -- END */
