@@ -27,28 +27,28 @@
     <main>
         <header>
             <ul>
-                <li><a href="#">Overview</a></li>
-                <li><a href="#">Block</a></li>
-                <li><a href="#">Element</a></li>
-                <li><a href="#">Modifier</a></li>
-                <li><a href="#">Strcture</a></li>
-                <li><a href="#">Example</a></li>
-                <li><a href="#">Benefits</a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#block">Block</a></li>
+                <li><a href="#element">Element</a></li>
+                <li><a href="#modifier">Modifier</a></li>
+                <li><a href="#structure">Strcture</a></li>
+                <li><a href="#example">Example</a></li>
+                <li><a href="#benefits">Benefits</a></li>
             </ul>
         </header>
         <article>
-            <h1>BEM Naming Convention Explained</h1>
+            <h1 id="overview">BEM Naming Convention Explained</h1>
             <p>The BEM naming convention (Block, Element, Modifier) is a methodology used for organizing CSS classes in a way that makes code more readable, maintainable, and scalable. It is particularly useful for large-scale projects or when working in teams. Here's how it breaks down:</p>
-            <h2>Block</h2>
+            <h2 id="block">Block</h2>
             <p>The block is a standalone component that represents a higher-level abstraction of the user interface. It could be something like a button, header, or menu.</p>
             <p>Example: <code class="code-element">.menu</code>, <code class="code-element">.button</code>, <code class="code-element">.header</code></p>
-            <h2>Element</h2>
+            <h2 id="element">Element</h2>
             <p>An element is a part of a block that has no standalone meaning and is semantically tied to its block. Elements are the building blocks of the block, and they can't exist without it. Elements are connected to blocks with a double underscore <code>__</code>.</p>
             <p>Example: <code class="code-element">.menu__item</code>, <code class="code-element">.button__icon</code class="code-element">, <code class="code-element">.header__logo</code></p>
-            <h2>Modifier</h2>
+            <h2 id="modifier">Modifier</h2>
             <p>A modifier is used to change the appearance, behavior, or state of a block or an element. Modifiers are connected with a double hyphen <code class="code-element">--</code>.</p>
             <p>Example: <code class="code-element">.menu__item</code>, <code class="code-element">.button__icon</code>, <code class="code-element">.header__logo</code></p>
-            <h2>BEM Naming Structure</h2>
+            <h2 id="structure">BEM Naming Structure</h2>
             <p>The general structure follows this pattern:</p>
             <div class="code-block">
                 <code>
@@ -58,7 +58,7 @@
                     .block__element--modifier {}<br>
                 </code>
             </div>
-            <h2>Example</h2>
+            <h2 id="example">Example</h2>
             <p>Let’s say you have a <code class="code-element">card</code> component with a title, text, and a button inside. You want to style it using BEM:</p>
             <div class="code-block">
                 <code>
@@ -74,7 +74,7 @@
                 <li>Element: <code class="code-element">card__title</code>, <code class="code-element">card__text</code>, <code class="code-element">card__button</code></li>
                 <li>Modifier: <code class="code-element">card__button--primary</code></li>
             </ul>
-            <h2>Benefits of BEM</h2>
+            <h2 id="benefits">Benefits of BEM</h2>
             <ul>
                 <li><strong>Clarity</strong>: It's clear which styles apply to which component.</li>
                 <li><strong>Reusability</strong>: Blocks and elements can be reused across different parts of the site.</li>
