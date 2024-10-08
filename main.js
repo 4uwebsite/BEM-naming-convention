@@ -1,33 +1,28 @@
-// lua code copy
+// Get the elements
 const luaBtn = document.getElementById('lua-btn')
-const luaBtnCurrentHTML = luaBtn.innerHTML
-luaBtn.addEventListener('click', function() {
-    luaBtn.innerText = `Copied!`
-    const copiedData = document.getElementById('code-block-lua').innerText
-
-    navigator.clipboard.writeText(copiedData).then(function() {
-        console.log(copiedData)
-        setTimeout(function() {
-            luaBtn.innerHTML =  luaBtnCurrentHTML
-        }, 2000)
-    }).catch(function(err) {
-        console.error('Could not copy: ' + err)
-    })
-})
-
-// html code copy
 const htmlBtn = document.getElementById('html-btn')
-const htmlBtnCurrentHTML = htmlBtn.innerHTML
-htmlBtn.addEventListener('click', function() {
-    htmlBtn.innerText = `Copied!`
-    const copiedData = document.getElementById('code-block-html').innerText
 
-    navigator.clipboard.writeText(copiedData).then(function() {
-        console.log(copiedData)
+
+// Button click events
+luaBtn.addEventListener('click', function() {
+    const copiedData = document.getElementById('code-block-lua').innerText
+    const currentHTML = luaBtn.innerHTML
+    copyData(luaBtn, copiedData, currentHTML)
+})
+htmlBtn.addEventListener('click', function() {
+    const copiedData = document.getElementById('code-block-html').innerText
+    const currentHTML = htmlBtn.innerHTML
+    copyData(htmlBtn, copiedData, currentHTML)
+})
+
+// Copying the data to clipboard
+function copyData(btnObject, data, html) {
+    navigator.clipboard.writeText(data).then(function() {
+        btnObject.innerText = `Copied!`
         setTimeout(function() {
-            htmlBtn.innerHTML =  htmlBtnCurrentHTML
+            btnObject.innerHTML = html
         }, 2000)
     }).catch(function(err) {
-        console.error('Could not copy: ' + err)
+        console.error(`Could not copy: ${err}`)
     })
-})
+}
