@@ -75,7 +75,7 @@ header ul li{
     transition: border 0.3s ease, background-color 0.3s ease, color 0.1s ease;
 }
 
-header ul li:hover, header ul li:visited {
+header ul li:hover, header ul li:visited, .code-copy-btn::after {
     border: 0.1rem solid var(--white-base-font-colour);
 }
 
@@ -101,13 +101,17 @@ h2 {
     margin: 2.5rem 0 0.5rem;
 }
 
-p {
-    margin-bottom: 0.5rem;
+p, li {
     line-height: 1.7rem;
 }
 
+p {
+    margin-bottom: 0.5rem;
+    /* line-height: 1.7rem; */
+}
+
 li {
-    line-height: 1.7rem;
+    /* line-height: 1.7rem; */
     padding: 0.3rem 0;
     margin-left: 1.3rem;
 }
@@ -169,7 +173,7 @@ li {
     background-color: var(--code-block-bg);
     /* color: var(--white-base-font-colour); */
     padding: 0.3125rem 0.625rem;
-    border: 0.1rem solid var(--white-base-font-colour);
+    /* border: 0.1rem solid var(--white-base-font-colour); */
     /* border-radius: 0.25rem; */
     opacity: 0;
     visibility: hidden;
