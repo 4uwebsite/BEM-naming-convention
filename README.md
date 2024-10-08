@@ -14,9 +14,9 @@
 - 1.0.0 - Initial code.
 
 # TODO
-- [-] Bug: Smooth scrolling not working on Safari.
 - [-] Bug: Full button area of the nav buttons don't work. Only clicking on text works.
 - [-] Responsive.
+- [x] Bug: Smooth scrolling not working on Safari.
 - [X] Refactor JS.
 - [x] Refactor CSS.
 - [x] Code block control buttons: write copy function.
