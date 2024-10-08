@@ -13,7 +13,7 @@
 - 1.0.0 - Initial code.
 
 # TODO
-- [-] Refactor CSS & JS.
+- [-] Refactor JS.
 - [-] Bug: Smooth scrolling not working on Safari.
 - [-] Bug: Full button area of the nav buttons don't work. Only clicking on text works.
 - [-] Responsive.
