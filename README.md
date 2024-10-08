@@ -14,8 +14,8 @@
 - 1.0.0 - Initial code.
 
 # TODO
-- [-] Bug: Full button area of the nav buttons don't work. Only clicking on text works.
 - [-] Responsive.
+- [x] Bug: Full button area of the nav buttons don't work. Only clicking on text works.
 - [x] Bug: Smooth scrolling not working on Safari.
 - [X] Refactor JS.
 - [x] Refactor CSS.
