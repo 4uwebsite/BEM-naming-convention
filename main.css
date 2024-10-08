@@ -145,8 +145,12 @@ li {
     margin-top: 1.125rem;
 }
 
-.code-header {
+.code-header, .code-copy-btn {
     background-color: var(--code-header-bg-grey);
+}
+
+.code-header {
+    /* background-color: var(--code-header-bg-grey); */
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     padding: 0.5rem 1rem;
@@ -158,7 +162,7 @@ li {
 }
 
 .code-copy-btn {
-    background-color: var(--code-header-bg-grey);
+    /* background-color: var(--code-header-bg-grey); */
     border: none;
     color: var(--code-header-font-lightgrey);
     display: inline-flex;
