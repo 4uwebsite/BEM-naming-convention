@@ -71,7 +71,7 @@ header ul li{
     padding: 0.2rem 0.7rem;
     /* margin: 0.5em 0.2em; */
     margin: 0.5em 0;
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: border 0.3s ease, background-color 0.3s ease, color 0.1s ease;
 }
 
@@ -156,7 +156,7 @@ li {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    cursor: pointer;
+    /* cursor: pointer; */
     position: relative;
 }
 
@@ -215,6 +215,10 @@ li {
 
 .justify-content--space-between {
     justify-content: space-between;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }
 
 /* UTIL - END */
