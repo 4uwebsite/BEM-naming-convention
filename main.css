@@ -131,8 +131,12 @@ li {
     font-size: var(--code-element-font-size);
 }
 
-.code-block {
+.code-block, .code-copy-btn::after {
     background-color: var(--code-block-bg);
+}
+
+.code-block {
+    /* background-color: var(--code-block-bg); */
     padding: 1rem;
     /* margin: 0.5rem 0; */
 }
@@ -170,7 +174,7 @@ li {
     bottom: -210%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--code-block-bg);
+    /* background-color: var(--code-block-bg); */
     /* color: var(--white-base-font-colour); */
     padding: 0.3125rem 0.625rem;
     /* border: 0.1rem solid var(--white-base-font-colour); */
