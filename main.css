@@ -147,6 +147,7 @@ li {
 
 .code-header, .code-copy-btn {
     background-color: var(--code-header-bg-grey);
+    color: var(--code-header-font-lightgrey);
 }
 
 .code-header {
@@ -155,7 +156,7 @@ li {
     border-bottom-right-radius: 0;
     padding: 0.5rem 1rem;
     font-size: var(--code-header-font-size);
-    color: var(--code-header-font-lightgrey);
+    /* color: var(--code-header-font-lightgrey); */
 
     /* display: flex; */
     /* justify-content: space-between; */
@@ -164,7 +165,7 @@ li {
 .code-copy-btn {
     /* background-color: var(--code-header-bg-grey); */
     border: none;
-    color: var(--code-header-font-lightgrey);
+    /* color: var(--code-header-font-lightgrey); */
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
