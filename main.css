@@ -18,6 +18,7 @@
     --h2-font-size: 1.25rem;
     --code-header-font-size: 0.75rem;
     --code-element-font-size: 0.875rem;
+    --nav-item--font-size: 0.8rem;
 }
 
 * {
@@ -31,50 +32,39 @@ html, body {
 }
 
 body {
-    background-color: var(--dark-grey-bg);
-    color: var(--white-base-font-colour);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-    display: flex;
     justify-content: center;
     margin-top: 1rem;
 }
 
 a {
-    color: var(--white-base-font-colour);
     text-decoration: none;
 }
 
 header {
     position: sticky;
     top: 0;
-    background-color: var(--dark-grey-bg);
     padding-bottom: 1.2rem;
     background: linear-gradient(to bottom, rgba(33, 33, 33, 1) 70%, rgba(33, 33, 33, 0) 100%);
     user-select: none;
 }
 
 header ul{
-    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 header ul li{
     width: 5rem;
     list-style-type: none;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: var(--nav-item--font-size);
     border: 0.1rem solid var(--code-element-bg);
-    border-radius: 0.25rem;
     padding: 0.2rem 0.7rem;
-    /* margin: 0.5em 0.2em; */
     margin: 0.5em 0;
-    cursor: pointer;
     transition: border 0.3s ease, background-color 0.3s ease, color 0.1s ease;
 }
 
-header ul li:hover, header ul li:visited {
+header ul li:hover, header ul li:visited, .code-copy-btn::after {
     border: 0.1rem solid var(--white-base-font-colour);
 }
 
@@ -84,14 +74,12 @@ header ul li:active, header ul li:focus {
 }
 
 main {
-    /* padding: 1.125rem 1rem; */
     margin: 0 10.6875rem;
     max-width: 40rem;
 }
 
 h1, h2 {
     margin: 1rem 0 0.5rem;
-    /* Fixes hiding behind the header */
     scroll-margin-top: 4rem;
 }
 
@@ -100,13 +88,15 @@ h2 {
     margin: 2.5rem 0 0.5rem;
 }
 
-p {
-    margin-bottom: 0.5rem;
+p, li {
     line-height: 1.7rem;
 }
 
+p {
+    margin-bottom: 0.5rem;
+}
+
 li {
-    line-height: 1.7rem;
     padding: 0.3rem 0;
     margin-left: 1.3rem;
 }
@@ -116,7 +106,7 @@ li {
 
 /* CLASSES & IDs -- START */
 
-.code-element, .code-block, .code-header {
+.code-element, .code-block, .code-header, header ul li, .code-copy-btn::after {
     border-radius: 0.25rem;
 }
 
@@ -126,36 +116,35 @@ li {
     font-size: var(--code-element-font-size);
 }
 
-.code-block {
+.code-block, .code-copy-btn::after {
     background-color: var(--code-block-bg);
+}
+
+.code-block {
     padding: 1rem;
-    /* margin: 0.5rem 0; */
 }
 
 .end-para {
     margin-top: 1.125rem;
 }
 
-.code-header {
+.code-header, .code-copy-btn {
     background-color: var(--code-header-bg-grey);
+    color: var(--code-header-font-lightgrey);
+}
+
+.code-header {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     padding: 0.5rem 1rem;
     font-size: var(--code-header-font-size);
-    color: var(--code-header-font-lightgrey);
-
-    display: flex;
-    justify-content: space-between;
 }
 
 .code-copy-btn {
-    background-color: var(--code-header-bg-grey);
     border: none;
-    color: var(--code-header-font-lightgrey);
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    cursor: pointer;
     position: relative;
 }
 
@@ -165,11 +154,7 @@ li {
     bottom: -210%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--code-block-bg);
-    color: var(--white-base-font-colour);
     padding: 0.3125rem 0.625rem;
-    border: 0.1rem solid var(--white-base-font-colour);
-    border-radius: 0.25rem;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease;
@@ -182,7 +167,6 @@ li {
 }
 
 .icon-sm {
-    /* font-size: var(--code-header-font-size); */
     width: 1rem;
     height: 1rem;
 }
@@ -198,6 +182,26 @@ li {
 
 .class-name-green {
     color: var(--class-name-green);
+}
+
+.dark-grey-bg {
+    background-color: var(--dark-grey-bg);
+}
+
+.base-font--color-white {
+    color: var(--white-base-font-colour);
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-content--space-between {
+    justify-content: space-between;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }
 
 /* UTIL - END */
