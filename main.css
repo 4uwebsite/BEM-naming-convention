@@ -18,6 +18,7 @@
     --h2-font-size: 1.25rem;
     --code-header-font-size: 0.75rem;
     --code-element-font-size: 0.875rem;
+    --nav-item--font-size: 0.8rem;
 }
 
 * {
@@ -64,7 +65,7 @@ header ul li{
     width: 5rem;
     list-style-type: none;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: var(--nav-item--font-size);
     border: 0.1rem solid var(--code-element-bg);
     border-radius: 0.25rem;
     padding: 0.2rem 0.7rem;
