@@ -2,6 +2,7 @@
  Sample project to understand the BEM naming convention (Block, Element, Modifier).
 
 # Version Control
+- 1.0.10 - Release version.
 - 1.0.9 - Refactoring - JS done.
 - 1.0.8 - Refactoring - CSS done.
 - 1.0.7 - Refactoring - HTML done.
@@ -14,7 +15,7 @@
 - 1.0.0 - Initial code.
 
 # TODO
-- [-] Responsive.
+- [-] Responsive: decided not to make it responsive as it is outside the scope of the project.
 - [x] Bug: Full button area of the nav buttons don't work. Only clicking on text works.
 - [x] Bug: Smooth scrolling not working on Safari.
 - [X] Refactor JS.
